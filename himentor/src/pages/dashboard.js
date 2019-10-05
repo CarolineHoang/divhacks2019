@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import SearchBar from './searchbar.js';
+import styled from 'styled-components';
 
+
+
+const DashContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FED2F8;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+`;
 
 
 class Dashboard extends Component {
@@ -15,10 +27,13 @@ class Dashboard extends Component {
 
 render (){
     return(
-        <div>
-        <SearchBar/>
+        <DashContainer>
+        
 
-        </div>
+        <SearchBar buttonName = {''}/> 
+        {/* This is a button */}
+
+        </DashContainer>
 
     )
 
