@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import DropDown from './dropdown.js'
 
+
+
+const Search = styled.div`
+    display: flex;
+`;
 
 
 const Form = styled.form`
-  display: inline;
+    display: inline;
+    margin-left: 2vw;
+//   display: flex;
+//   justify-content: center;
+
 `;
 
 const Input = styled.input`
+  margin-left: 1vw;
   margin-right: 1vw;
   -webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
   font-family: inherit;
   font-size: 1vw; /*100%*/
-  height: 0.7vw;
+  height: 2vw;
 
   background: transparent
     url("https://abeautifulsign.co.uk/images/magnifying-glass-3-xxl.png")
@@ -21,7 +32,7 @@ const Input = styled.input`
   background-size: 1vw;
   border: solid 1px #ccc;
   padding: 9px 10px 9px 32px;
-  width: 6vw;
+  width: 50vw;
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
   border-radius: 0.5em;
@@ -36,8 +47,6 @@ const Input = styled.input`
     background-size: 1.1vw;
   }
   &:focus {
-    width: 10vw;
-    padding-left: 32px;
     color: #000;
     background-color: #fff;
     background: #fff
@@ -50,31 +59,62 @@ const Input = styled.input`
     background-image: url("https://www.columbiaspectator.com/pb/resources/img/CDSwhitemasthead.png");
   }
 `;
+
+const SubmitButton = styled.input`
+  position:inline;
+  height: 3vw;
+  width:  10vw;
+  font-size: 1em;
+//   border-style: red;
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+`;
+
+
+
+
 class SearchBar extends Component {
-    constructor(){
-        super();
-    }
-    // this.state = {
-    //   };
+    constructor(props){
+        super(props);
+
+        this.state = {value: ''};
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        }
+        
+        handleChange(event) {
+        this.setState({value: event.target.value});
+        }
+        
+        handleSubmit(event) {
+        console.log('something happened')
+        alert('A name was submitted: ' + this.state.value);
+        event.preventDefault();
+        }
+
+
 
 
 
 
 render (){
     return(
-        <div>
-            lalalaldknadvjnaov
-            <Form>
-                  <Input />
-            </Form>
+        <Search>
+            
+            <DropDown/>
+            <Form onSubmit={this.handleSubmit}>
+            <lable>{this.props.buttonName}: </lable>
+                <Input type="text" value={this.state.value} onChange={this.handleChange} />
+            
+            <SubmitButton type="submit" value="Submit"/>
+            </Form >
+        </Search>
 
-        </div>
-
-    )
+    );
 
 
 
 
-};
+}
 }
 export default SearchBar;
