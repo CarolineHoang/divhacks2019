@@ -42,6 +42,7 @@ render () {
                  value={this.state.password} 
                  onChange={this.changeHandlerPassword} 
                 />
+                <button type="submit">Log In</button>
 
             </form>
         </div>
