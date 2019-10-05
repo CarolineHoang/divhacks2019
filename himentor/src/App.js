@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Homepage from './pages/Homepage';
 import Dashboard from './pages/dashboard';
+import Login from './pages/Login';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       </header> */}
       <Homepage/>
       <Dashboard/>
+      <Login/>
     </div>
   );
 }
