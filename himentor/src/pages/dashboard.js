@@ -16,7 +16,6 @@ class Dashboard extends Component {
 render (){
     return(
         <div>
-            lalalaldknadvjnaov
         <SearchBar/>
 
         </div>
