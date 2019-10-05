@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Homepage from './pages/Homepage';
+import Dashboard from './pages/dashboard';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         
       </header> */}
       <Homepage/>
+      <Dashboard/>
     </div>
   );
 }
