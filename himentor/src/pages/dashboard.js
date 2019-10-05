@@ -8,7 +8,7 @@ const DashContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: green;
+    background-color: #FED2F8;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -28,6 +28,7 @@ class Dashboard extends Component {
 render (){
     return(
         <DashContainer>
+        
 
         <SearchBar buttonName = {''}/> 
         {/* This is a button */}

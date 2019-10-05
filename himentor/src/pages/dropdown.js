@@ -28,7 +28,7 @@ const DDSelection = styled.input`
     width: 10vw;
     font-size: 1em;
     color: grey;
-    border: solid grey;
+    border: solid 1px grey;
     border-radius: 15%  15%  0%  0%;
 `;
 

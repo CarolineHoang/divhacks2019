@@ -30,7 +30,8 @@ const Input = styled.input`
     url("https://abeautifulsign.co.uk/images/magnifying-glass-3-xxl.png")
     no-repeat 9px center;
   background-size: 1vw;
-  border: solid 1px #ccc;
+  border: solid 1px grey;
+//   #ccc
   padding: 9px 10px 9px 32px;
   width: 50vw;
   -webkit-border-radius: 10em;
@@ -66,7 +67,7 @@ const SubmitButton = styled.input`
   width:  10vw;
   font-size: 1em;
 //   border-style: red;
-  border: none;
+  border: solid 1px grey;
   border-radius: 10px 10px 10px 10px;
 `;
 
