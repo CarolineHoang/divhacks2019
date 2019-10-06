@@ -41,8 +41,9 @@
 	font-weight: bold;
 	background-color: #F696FD;
 	padding: 30px;
+  text-align: center;
 	color: white;
-  	text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .animation{
