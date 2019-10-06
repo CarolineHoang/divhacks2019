@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './hp.css';
-
+import { Link } from 'react-router-dom';
 
 class Homepage extends Component {
     constructor(){
@@ -14,8 +14,8 @@ render (){
 
 
         <div className="topnav">
-            <a href="#">Login</a>
-            <a href="#">Sign Up</a>
+            <Link to= "/login">Login</Link>
+            <Link to= "/">Sign Up</Link>
         </div>
 
         <div className="name">
